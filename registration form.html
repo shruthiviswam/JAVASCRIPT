@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+
+
+	<script type="text/javascript">
+		function validate()
+		{
+			if (document.myForm.UserId.value==""||document.myForm.UserId.value.length<5||document.myForm.UserId.value.length>12) 
+			{
+				alert("Please provide your name between 5 to 12 characters!");
+				document.myForm.UserId.focus();
+				return false;
+			}
+			if (document.myForm.Password.value==""||document.myForm.Password.value.length<5||document.myForm.Password.value.length>12) 
+			{
+				alert("Please provide your Password between 7 to 12 characters!");
+				document.myForm.Password.focus();
+				return false;
+			}
+			if (document.myForm.Name.value=="") 
+			{
+				alert("Please provide your name");
+				document.myForm.Name.focus();
+				return false;
+			}
+			if (document.myForm.Country.value=="-1") 
+			{
+				alert("Please select your country!");
+				return false;
+			}
+			if (document.myForm.Zip.value==""||isNan(document.myForm.Zip.value)|| Zip()==0) 
+			{
+				alert("Please provide a Zip value");
+				document.myForm.Zip.focus();
+				return false;
+			}
+			if (document.myForm.Email.value==""||Email()==0) 
+			{
+				alert("Please provide your email!");
+				document.myForm.Email.focus();
+				return false;
+			}
+			if ((myForm.sex[0].checked == false) && (myForm.sex[1].checked == false))
+			{
+				alert("Please select your Gender");
+				return false;
+			}
+			var opt=document.myForm.Language.value;
+			if (!(opt[0].checked||opt[1].checked))
+			{
+				alert("Please select your Language");
+				return false;
+			}
+			if (document.myForm.Language.value=="") 
+			{
+				alert("Please select your Language");
+				return false;
+			}
+			var email=document.getElementByName('Email');
+			atpos=email.indexOf("@");
+			dotpos=email.indexOf(".");
+			if (atpos<1||(dotpos-atpos<2)) 
+			{
+				alert("Please enter correct Email id");
+				document.myForm.Email.focus();
+				return (0);
+			}
+			return (1);
+			return (true);
+		}
+	</script>
+	
+
+	
+	<script type="text/javascript">
+		function Email()
+		{
+			var email=document.getElementByName('Email');
+			atpos=email.indexOf("@");
+			dotpos=email.indexOf(".");
+			if (atpos<1||(dotpos-atpos<2)) 
+			{
+				alert("Please enter correct Email id");
+				document.myForm.Email.focus();
+				return (0);
+			}
+			return (1);
+		}
+		function Zip()
+		{
+			var zip=document.myForm.Zip.value;
+			if(zip!=[0-9])
+				{
+					alert("Please valid Zip Code!")
+					document.myForm.Zip.focus();
+					return (0);
+				}
+				return (1);
+		}
+	</script>
+</head>
+
+
+
+<body>
+	<h1> Registration Form </h1>
+	<form name="myForm" onsubmit="return (validate())">
+		<table>
+			<tr>
+				<td align="right"> User Id </td>
+				<td><input type="text" name="UserId" required></td>
+			</tr>
+			<tr>
+				<td align="right"> Password </td>
+				<td><input type="password" name="Password" required></td>
+			</tr>
+			<tr>
+				<td align="right"> Name </td>
+				<td><input type="text" name="Name" pattern="[A-Za-z]+" required></td>
+			</tr>
+			<tr>
+				<td align="right"> Address </td>
+				<td><input type="text" name="Address"></td>
+			</tr>
+			<tr>
+				<td align="right"> Country </td>
+				<td>
+					<select name="Country" required>
+						<option value="-1" selected>[Please select a country]</option>
+						<option value="1">USA</option>
+						<option value="2">UK</option>
+						<option value="3">INDIA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"> Zip Code </td>
+				<td><input type="text" name="Zip" pattern="[0-9]+" required></td>
+			</tr>
+			<tr>
+				<td align="right"> Email </td>
+				<td><input type="text" name="Email" required></td>
+			</tr>
+			<tr>
+				<td align="right"> Sex </td>
+				<td>
+					Male<input type="radio"value="Male" name="gender">
+					Female<input type="radio" value="Female" name="gender">
+				</td>
+			</tr>
+			<tr>
+				<td align="right"> Language </td>
+				<td>
+					English<input type="checkbox" value="English" name="Language">
+					Non-English<input type="checkbox" value="Non-English" name="Language">
+				</td>
+			</tr>
+			<tr>
+				<td align="right"> About </td>
+				<td><input type="text" name="About"></td>
+			</tr>
+			<tr>
+				<td>
+				<button type="Submit" value="Submit"> Submit</button>
+			</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>

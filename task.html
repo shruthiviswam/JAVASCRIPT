@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+
+		<h1> Arithmetic Operations</h1>
+		<label> Enter First Number : </label>
+		<input type="text" id ="num1"><br>
+		<label>Enter Second Number</label>
+		<input type="text" id="num2"><br>
+		<button type="button"  name="Submit" value="ADD" onclick= "add ()">ADD
+		</button>
+		<button type="button" name="Submit" value="SUB" onclick= "sub ()"> SUB
+		</button>
+		<button type="button" name="Submit" value="MULT" onclick= "mult ()">MULT
+		</button>
+		<button type="button" name="Submit" value="DIV" onclick= "div ()">DIV
+		</button><br>
+		<p id="demo"> </p>
+		<script>
+			function add ()
+			{
+				var x=parseInt(document.getElementById("num1").value);
+				var y=parseInt(document.getElementById("num2").value);
+				z=x+y;
+				document.write("The Answer is : ");
+				document.write(z);
+			}
+			function sub ()
+			{
+				var x=parseInt(document.getElementById("num1").value);
+				var y=parseInt(document.getElementById("num2").value);
+				z=x-y;
+				document.write("The Answer is : ");
+				document.write(z);
+			}
+			function mult ()
+			{
+				var x=parseInt(document.getElementById("num1").value);
+				var y=parseInt(document.getElementById("num2").value);
+				z=x*y;
+				document.write("The Answer is : ");
+				document.write(z);
+			}
+			function div ()
+			{
+				var x=parseInt(document.getElementById("num1").value);
+				var y=parseInt(document.getElementById("num2").value);
+				z=x/y;
+				document.write("The Answer is : ");
+				document.write(z);
+			}
+		</script>
+	</form>
+</body>
+</html>

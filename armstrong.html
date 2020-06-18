@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language="javascript">
+		var num=prompt("Enter the number","number");
+		var temp=num;
+		var arm=0;
+		while(num>0)
+			{
+				var rem=num % 10;
+				arm=arm+(rem*rem*rem);
+				num=parseInt(num/10);
+			}
+			if (arm==temp) {
+				document.write("Its Armstrong");
+			}
+			else 
+				document.write("Its not Armstrong");
+	</script>
+</head>
+<body>
+</body>
+</html>

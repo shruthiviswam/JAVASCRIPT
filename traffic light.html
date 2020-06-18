@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function stop()
+		{
+			document.getElementById("circle1").style.backgroundColor="red";
+			document.getElementById("circle2").style.backgroundColor="grey";
+			document.getElementById("circle3").style.backgroundColor="grey";
+		}
+		
+		function slow()
+		{
+			document.getElementById("circle1").style.backgroundColor="grey";
+			document.getElementById("circle2").style.backgroundColor="yellow";
+			document.getElementById("circle3").style.backgroundColor="grey";
+		}
+		function go()
+		{
+			document.getElementById("circle1").style.backgroundColor="grey";
+			document.getElementById("circle2").style.backgroundColor="grey";
+			document.getElementById("circle3").style.backgroundColor="green";
+		}	
+	</script>
+	<style>
+		#square1{
+			height: 100px;
+			width: 100px;
+			background-color: black;
+			border-radius: 20px 20px 0px 0px;
+			padding: 5px;
+		}
+		#circle1{
+			height: 50px;
+			width: 50px;
+			background-color: grey;
+			border-radius: 50px 50px 50px 50px;
+			align-content: center;
+			padding: 5px;
+			margin: 20%;
+			border: auto;
+		}
+		#square2{
+			height: 100px;
+			width: 100px;
+			background-color: black;
+			padding: 5px;
+		}
+		#circle2{
+			height: 50px;
+			width: 50px;
+			background-color: grey;
+			border-radius: 50px 50px 50px 50px;
+			align-content: center;
+			padding: 5px;
+			margin: 20%;
+			border: auto;
+		}
+		#square3{
+			height: 100px;
+			width: 100px;
+			background-color: black;
+			border-radius: 0px 0px 20px 20px;
+			padding: 5px;
+		}
+		#circle3{
+			height: 50px;
+			width: 50px;
+			background-color: grey;
+			border-radius: 50px 50px 50px 50px;
+			align-content: center;
+			padding: 5px;
+			margin: 20%;
+			border: auto;
+		}
+		table{
+			height: 10px;
+			width: 10px;
+		}
+		}
+		#light{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div id ="text">
+		<table>
+			<tr>
+				<td>
+	<button type="submit" name="Stop" onclick="stop()">Stop</button><br>
+</td></tr>
+<tr>
+	<td>
+	<button type="submit" name="Slow" onclick="slow()">Slow</button><br>
+</td></tr>
+<tr><td>
+	<button type="submit" name="Go" onclick="go()">Go</button><br>
+</td></tr>
+</table>
+</div>
+<div>
+	<div id="light">
+		<div>
+		<div id="square1">
+		<div id="circle1">
+		</div>
+		</div>
+	</div>
+	<div>
+			<div id="square2">
+		<div id="circle2">
+		</div>
+		</div>
+	</div>
+	<div>
+			<div id="square3">
+		<div id="circle3">
+		</div>
+		</div>
+	</div>
+</div>
+<p id="demo"></p>
+</body>
+</html>

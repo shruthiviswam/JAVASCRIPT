@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var num=prompt("Enter the number","number");
+		var temp=num;
+		var rev=0;
+		while(num>0)
+			{
+				var rem=num % 10;
+				rev=(rev*10)+rem;
+				num=parseInt(num/10);
+			}
+			if (rev==temp) {
+				document.write("Its paliandrome");
+			}
+			else 
+				document.write("Its not paliandrome");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
