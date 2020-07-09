@@ -3,6 +3,7 @@
 JS is mainly used for web application. It is coded in the <script> tag. It can be written externally also.
   
 This repository contains :
+
 ```
 - Pop-up messages
 - Operators
